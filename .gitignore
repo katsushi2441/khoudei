@@ -12,3 +12,4 @@ php/khoudei_data/geo/
 store/apps_*.json
 pv/apps_backup_*.json
 __pycache__/
+pv/apps_backup_*.json
