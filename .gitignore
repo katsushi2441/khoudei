@@ -1,0 +1,14 @@
+*.env
+.env.*
+*.bak
+*.bak-*
+data/*.csv
+data/*.zip
+data/*.sqlite
+data/*.sqlite-*
+outputs/
+php/khoudei_data/*.sqlite*
+php/khoudei_data/geo/
+store/apps_*.json
+pv/apps_backup_*.json
+__pycache__/
