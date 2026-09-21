@@ -815,7 +815,7 @@ if ($path === 'about') {
     echo '<div class="panel"><h3>同じ仕組みを自分のところで動かす</h3>'
        . '<p>事務所・自治体・会社の名前で公開できるオンプレミス版をソースコード同梱で出しています。'
        . 'PHPが動くレンタルサーバーにファイルを置くだけで動き、判定は置いた場所で完結します（外部のAIやAPIには出しません）。</p>'
-       . '<p><a class="btn" href="https://kappstore.exbridge.jp/?ref=kshuro-about">kappstore で見る</a></p></div>';
+       . '<p><a class="btn" href="https://kappstore.exbridge.jp/?ref=khoudei-about">kappstore で見る</a></p></div>';
     foot_html();
     exit;
 }
