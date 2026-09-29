@@ -253,6 +253,8 @@ function head_html($title, $desc, $canon, $ld_extra = null) {
         else { foreach ($ld_extra as $x) { $graph[] = $x; } }
     }
     echo '<script type="application/ld+json">' . json_encode(array('@context' => 'https://schema.org', '@graph' => $graph), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>';
+    // 再販パートナー募集の枠（中身は kurage_web/partner-bar.js。kurage.exbridge.jp 以外では何も出さない）
+    echo '<script src="https://kurage.exbridge.jp/partner-bar.js" defer></script>';
     echo '</head><body><header><div class="wrap">';
     echo '<a class="brand" href="' . h($SELF) . '/">' . h($SITE) . '</a>';
     echo '<nav class="menu">';
@@ -871,7 +873,8 @@ if ($q !== '' && $pref && $ck) {
     $desc = $place_here . 'の近くにある放課後等デイサービス・児童発達支援・保育所等訪問支援・障害児相談支援を、距離順に定員つきで表示しました。'
           . tp_label($LATEST) . '時点の公表データ。空き状況は各事業所へお問い合わせください。';
 } else {
-    $title = '放課後等デイサービス・児童発達支援を住所から探す｜全国' . n($NAT['total']) . 'か所の定員・連絡先';
+    // **題名は全角32字以内。** head_html が '｜' . $SITE を足すので、ここは短くする。
+    $title = '放課後等デイサービスを住所から探す';
     $desc = '住所を入れると、通える範囲の放課後等デイサービス' . n($na) . 'か所・児童発達支援' . n($nb) . 'か所・保育所等訪問支援・障害児相談支援を距離順に表示します。'
           . '市区町村ごとの公表件数の推移と、公表データから消えた事業所も見られます。国のオープンデータのみ使用。';
 }
